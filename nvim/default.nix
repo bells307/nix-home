@@ -10,6 +10,7 @@
       stylua
       rust-analyzer
       nil
+      jq
     ];
   };
 
