@@ -51,3 +51,12 @@ vim.o.undolevels = 10000               -- 10x more undo levels
 vim.g.netrw_banner = 0
 
 vim.o.background = "dark"
+
+-- auto-reload files when changed outside of vim
+vim.o.autoread = true
+
+-- trigger autoread when changing buffers or coming back to vim
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+	pattern = "*",
+	command = "checktime",
+})
