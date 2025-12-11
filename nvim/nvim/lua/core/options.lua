@@ -60,3 +60,13 @@ vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHo
 	pattern = "*",
 	command = "checktime",
 })
+
+-- autosave configuration
+vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
+	pattern = "*",
+	callback = function()
+		if vim.bo.modifiable and vim.bo.modified and vim.fn.expand("%") ~= "" and vim.bo.buftype == "" then
+			vim.cmd("silent! write")
+		end
+	end,
+})
