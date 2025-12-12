@@ -4,28 +4,7 @@
   programs.git = {
     enable = true;
     
-    delta = {
-      enable = true;
-      options = {
-        navigate = true;
-        side-by-side = true;
-        line-numbers = true;
-        syntax-theme = "Nord";
-        features = "decorations";
-        decorations = {
-          commit-decoration-style = "bold yellow box ul";
-          file-style = "bold yellow ul";
-          file-decoration-style = "none";
-          hunk-header-decoration-style = "cyan box ul";
-        };
-        line-numbers-left-style = "cyan";
-        line-numbers-right-style = "cyan";
-        line-numbers-minus-style = "red";
-        line-numbers-plus-style = "green";
-      };
-    };
-
-    extraConfig = {
+    settings = {
       core = {
         pager = "delta";
       };
@@ -38,6 +17,28 @@
       merge = {
         conflictstyle = "diff3";
       };
+    };
+  };
+
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+    options = {
+      navigate = true;
+      side-by-side = true;
+      line-numbers = true;
+      syntax-theme = "Nord";
+      features = "decorations";
+      decorations = {
+        commit-decoration-style = "bold yellow box ul";
+        file-style = "bold yellow ul";
+        file-decoration-style = "none";
+        hunk-header-decoration-style = "cyan box ul";
+      };
+      line-numbers-left-style = "cyan";
+      line-numbers-right-style = "cyan";
+      line-numbers-minus-style = "red";
+      line-numbers-plus-style = "green";
     };
   };
 
@@ -94,7 +95,7 @@
 
   home.packages = with pkgs; [
     # Дополнительные утилиты для работы с git
-    git-delta
+    delta
     difftastic  # Альтернативный diff tool, можно попробовать
   ];
 }
