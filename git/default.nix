@@ -5,12 +5,6 @@
     enable = true;
     
     settings = {
-      core = {
-        pager = "delta";
-      };
-      interactive = {
-        diffFilter = "delta --color-only";
-      };
       diff = {
         colorMoved = "default";
       };
