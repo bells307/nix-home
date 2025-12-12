@@ -14,12 +14,28 @@
   home.packages = with pkgs; [
     zsh
     git
-    kitty
-    neovim
     tmux
+    neovim
+    fzf
+    zoxide
+    yazi
+    neofetch
     direnv
     nix-direnv
+    lazygit
     delta
+    claude-code
+    codex
     opencode
+    nixfmt
+    taplo
+    stylua
+    rustc
+    rustfmt
+    cargo
+    rust-analyzer
+    just
+    jq
+    somafm-cli
   ];
 }
