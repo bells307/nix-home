@@ -17,6 +17,7 @@
       kitty = ./kitty;
       zsh = ./zsh;
       direnv = ./direnv;
+      git = ./git;
     };
   };
 }
