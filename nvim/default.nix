@@ -9,6 +9,7 @@
     extraPackages = with pkgs; [
       stylua
       rust-analyzer
+      rustfmt
       nil
       jq
     ];
