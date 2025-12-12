@@ -11,7 +11,42 @@
 
   outputs = inputs: {
     homeManagerModules = {
-      default = ./default.nix;
+      default = {pkgs, ...}: {
+        imports = [
+          ./nvim
+          ./tmux
+          ./kitty
+          ./zsh
+          ./direnv
+          ./opencode
+          ./git
+        ];
+
+        home.stateVersion = "25.11";
+
+        home.packages = with pkgs; [
+          fzf
+          zoxide
+          yazi
+          neofetch
+          claude-code
+          codex
+          opencode
+          nixfmt
+          taplo
+          stylua
+          rustc
+          rustfmt
+          nil
+          alejandra
+          cargo
+          rust-analyzer
+          just
+          jq
+          somafm-cli
+        ];
+      };
+      
       nvim = ./nvim;
       tmux = ./tmux;
       kitty = ./kitty;
