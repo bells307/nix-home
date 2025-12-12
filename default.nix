@@ -13,12 +13,10 @@
 
   home.packages = with pkgs; [
     zsh
-    tmux
     fzf
     zoxide
     yazi
     neofetch
-    nix-direnv
     claude-code
     codex
     opencode
