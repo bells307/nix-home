@@ -13,17 +13,12 @@
 
   home.packages = with pkgs; [
     zsh
-    git
     tmux
-    neovim
     fzf
     zoxide
     yazi
     neofetch
-    direnv
     nix-direnv
-    lazygit
-    delta
     claude-code
     codex
     opencode
