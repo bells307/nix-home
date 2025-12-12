@@ -40,10 +40,14 @@
     enable = true;
     settings = {
       git = {
-        paging = {
-          colorArg = "always";
-          pager = "delta --dark --paging=never";
-        };
+        # Новый формат pagers для последних версий lazygit
+        pagers = [
+          {
+            id = "main";
+            colorArg = "always";
+            pager = "delta --dark --paging=never";
+          }
+        ];
       };
       
       gui = {
@@ -68,14 +72,14 @@
           command = "git diff --cached";
           context = "files";
           description = "Diff staged changes";
-          subprocess = true;
+          output = "terminal";  # Изменено с subprocess на output
         }
         {
           key = "<c-d>";
           command = "git diff {{.SelectedFile.Name}}";
           context = "files";
           description = "Diff current file";
-          subprocess = true;
+          output = "terminal";  # Изменено с subprocess на output
         }
       ];
 
