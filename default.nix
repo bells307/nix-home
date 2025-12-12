@@ -12,7 +12,6 @@
   home.stateVersion = "24.11";
 
   home.packages = with pkgs; [
-    zsh
     fzf
     zoxide
     yazi
