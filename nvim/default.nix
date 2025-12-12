@@ -12,6 +12,7 @@
       rustfmt
       nil
       jq
+      alejandra
     ];
   };
 

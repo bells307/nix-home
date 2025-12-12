@@ -5,6 +5,7 @@ return {
 			lua = { "stylua" },
 			go = { "gofmt", "goimports" },
 			json = { "jq" },
+			nix = { "alejandra" },
 		},
 		format_on_save = {
 			timeout_ms = 500,
