@@ -90,10 +90,4 @@
       };
     };
   };
-
-  home.packages = with pkgs; [
-    # Дополнительные утилиты для работы с git
-    delta
-    difftastic  # Альтернативный diff tool, можно попробовать
-  ];
 }

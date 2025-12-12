@@ -32,6 +32,8 @@
     stylua
     rustc
     rustfmt
+    nil
+    alejandra
     cargo
     rust-analyzer
     just
